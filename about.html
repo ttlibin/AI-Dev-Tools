@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - AI Dev Tools Navigator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>AI Dev Tools</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" data-i18n="home">Home</a></li>
+                    <li><a href="about.html" class="active" data-i18n="about">About</a></li>
+                    <li><a href="#contact" data-i18n="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-toggle">
+                <button id="lang-en" class="lang-btn active">EN</button>
+                <button id="lang-zh" class="lang-btn">中文</button>
+            </div>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Content -->
+    <section class="about-section">
+        <div class="container">
+            <h2 data-i18n="about_title">About AI Dev Tools Navigator</h2>
+            <div class="about-content">
+                <p data-i18n="about_intro">AI Dev Tools Navigator is a curated collection of AI-powered tools designed to enhance the development workflow for programmers of all skill levels.</p>
+                
+                <h3 data-i18n="mission_title">Our Mission</h3>
+                <p data-i18n="mission_text">Our mission is to help developers discover the best AI tools that can improve their productivity, code quality, and learning experience. As AI continues to transform the development landscape, staying informed about the latest tools is essential for modern developers.</p>
+                
+                <h3 data-i18n="criteria_title">Tool Selection Criteria</h3>
+                <p data-i18n="criteria_intro">Each tool in our collection is carefully selected based on:</p>
+                <ul class="criteria-list">
+                    <li data-i18n="criteria_1">Usefulness for developers</li>
+                    <li data-i18n="criteria_2">AI integration quality</li>
+                    <li data-i18n="criteria_3">User experience</li>
+                    <li data-i18n="criteria_4">Active development and support</li>
+                    <li data-i18n="criteria_5">Positive community feedback</li>
+                </ul>
+                
+                <h3 data-i18n="categories_title">Categories</h3>
+                <p data-i18n="categories_intro">We've organized tools into the following categories to help you find exactly what you need:</p>
+                <ul class="categories-list">
+                    <li data-i18n="category_1"><strong>Code Generation</strong> - Tools that help write code automatically</li>
+                    <li data-i18n="category_2"><strong>Code Explanation</strong> - Tools that help understand existing code</li>
+                    <li data-i18n="category_3"><strong>Code Refactoring</strong> - Tools that improve code quality</li>
+                    <li data-i18n="category_4"><strong>Testing & Debugging</strong> - Tools that help find and fix bugs</li>
+                    <li data-i18n="category_5"><strong>Documentation</strong> - Tools that generate documentation</li>
+                    <li data-i18n="category_6"><strong>Learning Assistance</strong> - Tools that help learn programming</li>
+                    <li data-i18n="category_7"><strong>Design Assistance</strong> - Tools that help with UI/UX design</li>
+                </ul>
+                
+                <h3 data-i18n="contact_title">Contact Us</h3>
+                <p data-i18n="contact_text">Have a suggestion for a tool that should be included? Found an issue with the site? Please reach out to us!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="copyright">&copy; 2023 AI Dev Tools Navigator. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+    <script>
+        // Theme toggle functionality
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            const icon = themeToggleBtn.querySelector('i');
+            
+            if (document.body.classList.contains('dark-theme')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        
+        // Check for saved theme preference
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+                themeToggleBtn.querySelector('i').classList.remove('fa-moon');
+                themeToggleBtn.querySelector('i').classList.add('fa-sun');
+            }
+        });
+    </script>
+</body>
+</html> 

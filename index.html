@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Dev Tools Navigator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Add SF Pro font or alternative -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>AI Dev Tools</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active" data-i18n="home">Home</a></li>
+                    <li><a href="about.html" data-i18n="about">About</a></li>
+                    <li><a href="#contact" data-i18n="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-toggle">
+                <button id="lang-en" class="lang-btn active">EN</button>
+                <button id="lang-zh" class="lang-btn">中文</button>
+            </div>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2 data-i18n="hero_title">Discover the Best AI Tools for Developers</h2>
+            <p data-i18n="hero_subtitle">A curated collection of AI-powered tools to enhance your development workflow</p>
+            <div class="search-bar">
+                <input type="text" data-i18n-placeholder="search_placeholder" placeholder="Search for tools...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Tabs -->
+    <section class="categories">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab active" data-category="all" data-i18n="all_tools">All Tools</button>
+                <button class="tab" data-category="code-generation" data-i18n="code_generation">Code Generation</button>
+                <button class="tab" data-category="code-explanation" data-i18n="code_explanation">Code Explanation</button>
+                <button class="tab" data-category="code-refactoring" data-i18n="code_refactoring">Code Refactoring</button>
+                <button class="tab" data-category="testing" data-i18n="testing_debugging">Testing & Debugging</button>
+                <button class="tab" data-category="documentation" data-i18n="documentation">Documentation</button>
+                <button class="tab" data-category="learning" data-i18n="learning_assistance">Learning Assistance</button>
+                <button class="tab" data-category="design" data-i18n="design_assistance">Design Assistance</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Grid -->
+    <section class="tools">
+        <div class="container">
+            <div class="tools-grid">
+                <!-- Tool cards will be generated here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="copyright">&copy; 2023 AI Dev Tools Navigator. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/tools-data.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
