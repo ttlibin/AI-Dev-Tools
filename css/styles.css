@@ -182,59 +182,133 @@ ul {
 
 .tool-card {
     background-color: var(--secondary-bg);
-    border-radius: var(--border-radius);
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: var(--card-shadow);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
 }
 
 .tool-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
-.tool-card-header {
-    padding: 20px;
+.tool-header {
+    padding: 16px 16px 8px 16px;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.tool-logo {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    margin-right: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .tool-name {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-color);
+    text-align: left;
 }
 
-.tool-card-body {
-    padding: 20px;
+.tool-screenshot-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: -8px;
+}
+
+.tool-screenshot {
+    width: 100%;
+    height:200px;
+    object-fit: cover;
+    object-position: center top;
+    max-height: none;
+}
+
+.screenshot-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height:0px;
+    background-color: var(--secondary-bg);
+    z-index: 10;
+}
+
+.tool-card-content {
+    padding: 16px 16px 16px 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .tool-description {
-    margin-bottom: 20px;
-    color: var(--light-text);
+    color: var(--text-secondary);
     font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 16px;
+    flex-grow: 1;
+}
+
+.tool-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.tool-category-tag {
+    background-color: rgba(0, 122, 255, 0.1);
+    color: var(--accent-color);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
 }
 
 .tool-link {
-    display: inline-block;
-    background-color: var(--accent-color);
-    color: white;
-    padding: 8px 15px;
-    border-radius: var(--border-radius);
+    color: var(--accent-color);
+    text-decoration: none;
     font-size: 14px;
     font-weight: 500;
-    transition: var(--transition);
+    display: flex;
+    align-items: center;
 }
 
-.tool-link:hover {
-    background-color: #0056b3;
+.tool-link i {
+    margin-left: 4px;
+}
+
+/* 默认截图占位符样式 */
+.placeholder-screenshot {
+    width: 100%;
+    height: 200px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    font-size: 14px;
+}
+
+/* 暗色模式调整 */
+.dark-theme .tool-rating {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.dark-theme .tool-category-tag {
+    background-color: rgba(0, 122, 255, 0.2);
+}
+
+.dark-theme .placeholder-screenshot {
+    background-color: #333;
+    color: #999;
 }
 
 /* Footer */
@@ -412,4 +486,14 @@ body.dark-theme .search-bar input {
 
 @keyframes spin {
     to { transform: rotate(360deg); }
-} 
+}
+
+/* 确保没有伪元素添加内容 */
+.tool-screenshot::after,
+.tool-screenshot::before,
+.tool-screenshot-container::after,
+.tool-screenshot-container::before {
+    content: none !important;
+    display: none !important;
+}
+

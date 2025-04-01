@@ -16,25 +16,76 @@ function init() {
 
 // Render tools to the grid
 function renderTools(tools) {
-    toolsGrid.innerHTML = '';
+    showLoading();
     
-    const visitWebsiteText = translations[currentLang]['visit_website'];
-    
-    tools.forEach(tool => {
-        const toolCard = document.createElement('div');
-        toolCard.className = 'tool-card';
-        toolCard.innerHTML = `
-            <div class="tool-card-header">
-                <img src="${tool.logo}" alt="${tool.name} logo" class="tool-logo">
-                <h3 class="tool-name">${tool.name}</h3>
-            </div>
-            <div class="tool-card-body">
-                <p class="tool-description">${tool.description}</p>
-                <a href="${tool.url}" class="tool-link" target="_blank">${visitWebsiteText}</a>
-            </div>
-        `;
-        toolsGrid.appendChild(toolCard);
-    });
+    setTimeout(() => {
+        toolsGrid.innerHTML = '';
+        
+        const visitWebsiteText = translations[currentLang]['visit_website'];
+        const categoryTranslations = {
+            'code-generation': translations[currentLang]['code_generation'],
+            'code-explanation': translations[currentLang]['code_explanation'],
+            'code-refactoring': translations[currentLang]['code_refactoring'],
+            'testing': translations[currentLang]['testing_debugging'],
+            'documentation': translations[currentLang]['documentation'],
+            'learning': translations[currentLang]['learning_assistance'],
+            'design': translations[currentLang]['design_assistance']
+        };
+        
+        tools.forEach(tool => {
+            const toolCard = document.createElement('div');
+            toolCard.className = 'tool-card';
+            
+            // 确定截图URL
+            let screenshotUrl = tool.screenshot || '';
+            let screenshotHtml = '';
+            
+            if (screenshotUrl) {
+                screenshotHtml = `
+                    <div class="tool-screenshot-container">
+                        <img 
+                            src="${screenshotUrl}" 
+                            alt="${tool.name}" 
+                            class="tool-screenshot" 
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                        >
+                        <div class="placeholder-screenshot" style="display:none;">${tool.name}</div>
+                        <div class="screenshot-overlay"></div>
+                    </div>
+                `;
+            } else {
+                screenshotHtml = `
+                    <div class="tool-screenshot-container">
+                        <div class="placeholder-screenshot">${tool.name}</div>
+                        <div class="screenshot-overlay"></div>
+                    </div>
+                `;
+            }
+            
+            // 获取分类名称的翻译
+            const categoryName = categoryTranslations[tool.category] || tool.category;
+            
+            toolCard.innerHTML = `
+                <div class="tool-header">
+                    <h3 class="tool-name">${tool.name}</h3>
+                </div>
+                ${screenshotHtml}
+                <div class="tool-card-content">
+                    <p class="tool-description">${tool.description}</p>
+                    <div class="tool-footer">
+                        <span class="tool-category-tag">${categoryName}</span>
+                        <a href="${tool.url}" class="tool-link" target="_blank">
+                            ${visitWebsiteText} <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            `;
+            toolsGrid.appendChild(toolCard);
+        });
+        
+        setupLazyLoading();
+        hideLoading();
+    }, 300);
 }
 
 // Filter tools by category
@@ -129,6 +180,16 @@ document.addEventListener('DOMContentLoaded', () => {
     init();
 });
 
+function showLoading() {
+    document.getElementById('loading').style.display = 'flex';
+    toolsGrid.style.display = 'none';
+}
+
+function hideLoading() {
+    document.getElementById('loading').style.display = 'none';
+    toolsGrid.style.display = 'grid';
+}
+
 // 添加图片懒加载功能
 function setupLazyLoading() {
     if ('IntersectionObserver' in window) {
@@ -155,4 +216,4 @@ function setupLazyLoading() {
             img.src = img.getAttribute('data-src');
         });
     }
-} 
+}
