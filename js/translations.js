@@ -19,6 +19,7 @@ const translations = {
         "documentation": "Documentation",
         "learning_assistance": "Learning Assistance",
         "design_assistance": "Design Assistance",
+        "collaboration_tools": "Collaboration",
         
         // Tool Card
         "visit_website": "Visit Website",
@@ -47,6 +48,7 @@ const translations = {
         "category_5": "Documentation - Tools that generate documentation",
         "category_6": "Learning Assistance - Tools that help learn programming",
         "category_7": "Design Assistance - Tools that help with UI/UX design",
+        "category_8": "Collaboration - Tools that facilitate teamwork and communication",
         "contact_title": "Contact Us",
         "contact_text": "Have a suggestion for a tool that should be included? Found an issue with the site? Please reach out to us!"
     },
@@ -70,6 +72,7 @@ const translations = {
         "documentation": "文档生成",
         "learning_assistance": "学习辅助",
         "design_assistance": "设计辅助",
+        "collaboration_tools": "协作",
         
         // 工具卡片
         "visit_website": "访问网站",
@@ -98,6 +101,7 @@ const translations = {
         "category_5": "文档生成 - 生成文档的工具",
         "category_6": "学习辅助 - 帮助学习编程的工具",
         "category_7": "设计辅助 - 帮助UI/UX设计的工具",
+        "category_8": "协作 - 帮助团队协作和沟通的工具",
         "contact_title": "联系我们",
         "contact_text": "有工具建议想要包含？发现网站问题？请联系我们！"
     }

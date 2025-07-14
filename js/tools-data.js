@@ -381,5 +381,16 @@ const toolsData = [
         screenshot: "img/screenshots/visily.png",
         url: "https://www.visily.ai/",
         category: "design"
+    },
+
+    // Collaboration & Code Hosting
+    {
+        id: 47,
+        name: "GitHub",
+        description: "The world's leading platform for version control, collaboration, and code hosting with advanced project management features",
+        logo: "https://github.com/favicon.ico",
+        screenshot: "img/screenshots/github.png",
+        url: "https://github.com",
+        category: "collaboration"
     }
 ]; 

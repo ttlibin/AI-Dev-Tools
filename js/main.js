@@ -29,7 +29,8 @@ function renderTools(tools) {
             'testing': translations[currentLang]['testing_debugging'],
             'documentation': translations[currentLang]['documentation'],
             'learning': translations[currentLang]['learning_assistance'],
-            'design': translations[currentLang]['design_assistance']
+            'design': translations[currentLang]['design_assistance'],
+            'collaboration': translations[currentLang]['collaboration_tools']
         };
         
         tools.forEach(tool => {
