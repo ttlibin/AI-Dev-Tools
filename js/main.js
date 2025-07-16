@@ -22,6 +22,7 @@ function renderTools(tools) {
         toolsGrid.innerHTML = '';
         
         const visitWebsiteText = translations[currentLang]['visit_website'];
+        const detailsText = translations[currentLang]['details'];
         const categoryTranslations = {
             'code-generation': translations[currentLang]['code_generation'],
             'code-explanation': translations[currentLang]['code_explanation'],
@@ -75,9 +76,11 @@ function renderTools(tools) {
                     <p class="tool-description">${tool.description}</p>
                     <div class="tool-footer">
                         <span class="tool-category-tag">${categoryName}</span>
-                        <a href="${tool.url}" class="tool-link" target="_blank">
-                            ${visitWebsiteText} <i class="fas fa-external-link-alt"></i>
-                        </a>
+                        <div class="tool-actions">
+                            <a href="tool-detail.html?id=${tool.id}" class="tool-detail-link">
+                                ${detailsText} <i class="fas fa-info-circle"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             `;

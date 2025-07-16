@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Detail - AI Dev Tools Navigator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">AI Dev Tools</a></h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" data-i18n="home">Home</a></li>
+                    <li><a href="about.html" data-i18n="about">About</a></li>
+                    <li><a href="#contact" data-i18n="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-toggle">
+                <button id="lang-en" class="lang-btn active">EN</button>
+                <button id="lang-zh" class="lang-btn">中文</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Tool Detail Content -->
+    <section class="tool-detail">
+        <div class="container">
+            <div class="tool-header">
+                <div class="tool-info">
+                    <h1 id="tool-name"></h1>
+                    <p id="tool-description"></p>
+                    <div class="tool-meta">
+                        <span class="category" id="tool-category"></span>
+                        <span class="rating" id="tool-rating"></span>
+                    </div>
+                    <a id="tool-link" href="#" class="btn-primary" target="_blank" data-i18n="visit_website">Visit Website</a>
+                </div>
+                <div class="tool-screenshot">
+                    <img id="tool-screenshot" src="" alt="Tool Screenshot">
+                </div>
+            </div>
+
+            <div class="tool-content">
+                <div class="content-tabs">
+                    <button class="tab-btn active" data-tab="overview" data-i18n="overview">Overview</button>
+                    <button class="tab-btn" data-tab="features" data-i18n="features">Features</button>
+                    <button class="tab-btn" data-tab="pricing" data-i18n="pricing">Pricing</button>
+                    <button class="tab-btn" data-tab="reviews" data-i18n="reviews">Reviews</button>
+                </div>
+
+                <div class="tab-content active" id="overview">
+                    <h3 data-i18n="what_is_tool">What is this tool?</h3>
+                    <p id="detailed-description"></p>
+                    
+                    <h3 data-i18n="key_benefits">Key Benefits</h3>
+                    <ul id="benefits-list"></ul>
+                    
+                    <h3 data-i18n="best_for">Best For</h3>
+                    <p id="best-for"></p>
+                </div>
+
+                <div class="tab-content" id="features">
+                    <h3 data-i18n="main_features">Main Features</h3>
+                    <ul id="features-list"></ul>
+                    
+                    <h3 data-i18n="supported_languages">Supported Languages</h3>
+                    <div id="supported-languages"></div>
+                    
+                    <h3 data-i18n="integrations">Integrations</h3>
+                    <div id="integrations"></div>
+                </div>
+
+                <div class="tab-content" id="pricing">
+                    <h3 data-i18n="pricing_plans">Pricing Plans</h3>
+                    <div id="pricing-info"></div>
+                </div>
+
+                <div class="tab-content" id="reviews">
+                    <h3 data-i18n="user_reviews">User Reviews</h3>
+                    <div id="reviews-content"></div>
+                    
+                    <h3 data-i18n="pros_cons">Pros & Cons</h3>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4 data-i18n="pros">Pros</h4>
+                            <ul id="pros-list"></ul>
+                        </div>
+                        <div class="cons">
+                            <h4 data-i18n="cons">Cons</h4>
+                            <ul id="cons-list"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 AI Dev Tools Navigator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/tool-detail.js"></script>
+</body>
+</html>

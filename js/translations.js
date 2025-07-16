@@ -23,6 +23,7 @@ const translations = {
         
         // Tool Card
         "visit_website": "Visit Website",
+        "details": "Details",
         
         // Footer
         "copyright": "© 2023 AI Dev Tools Navigator. All rights reserved.",
@@ -50,7 +51,24 @@ const translations = {
         "category_7": "Design Assistance - Tools that help with UI/UX design",
         "category_8": "Collaboration - Tools that facilitate teamwork and communication",
         "contact_title": "Contact Us",
-        "contact_text": "Have a suggestion for a tool that should be included? Found an issue with the site? Please reach out to us!"
+        "contact_text": "Have a suggestion for a tool that should be included? Found an issue with the site? Please reach out to us!",
+        
+        // Tool Detail Page
+        "overview": "Overview",
+        "features": "Features",
+        "pricing": "Pricing",
+        "reviews": "Reviews",
+        "what_is_tool": "What is this tool?",
+        "key_benefits": "Key Benefits",
+        "best_for": "Best For",
+        "main_features": "Main Features",
+        "supported_languages": "Supported Languages",
+        "integrations": "Integrations",
+        "pricing_plans": "Pricing Plans",
+        "user_reviews": "User Reviews",
+        "pros_cons": "Pros & Cons",
+        "pros": "Pros",
+        "cons": "Cons"
     },
     zh: {
         // 页眉
@@ -76,6 +94,7 @@ const translations = {
         
         // 工具卡片
         "visit_website": "访问网站",
+        "details": "详细信息",
         
         // 页脚
         "copyright": "© 2023 AI开发工具导航. 保留所有权利.",
@@ -103,6 +122,23 @@ const translations = {
         "category_7": "设计辅助 - 帮助UI/UX设计的工具",
         "category_8": "协作 - 帮助团队协作和沟通的工具",
         "contact_title": "联系我们",
-        "contact_text": "有工具建议想要包含？发现网站问题？请联系我们！"
+        "contact_text": "有工具建议想要包含？发现网站问题？请联系我们！",
+        
+        // 工具详情页面
+        "overview": "概览",
+        "features": "功能特性",
+        "pricing": "价格方案",
+        "reviews": "用户评价",
+        "what_is_tool": "这是什么工具？",
+        "key_benefits": "主要优势",
+        "best_for": "最适合",
+        "main_features": "主要功能",
+        "supported_languages": "支持的编程语言",
+        "integrations": "集成支持",
+        "pricing_plans": "价格方案",
+        "user_reviews": "用户评价",
+        "pros_cons": "优缺点",
+        "pros": "优点",
+        "cons": "缺点"
     }
 }; 

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - AI Dev Tools Navigator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">AI Dev Tools</a></h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" data-i18n="home">Home</a></li>
+                    <li><a href="about.html" data-i18n="about">About</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="#contact" data-i18n="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-toggle">
+                <button id="lang-en" class="lang-btn active">EN</button>
+                <button id="lang-zh" class="lang-btn">中文</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <h2>Latest Articles & Guides</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="img/blog/ai-coding-2024.jpg" alt="AI Coding Trends 2024">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="date">January 15, 2024</span>
+                            <span class="category">Trends</span>
+                        </div>
+                        <h3><a href="blog/ai-coding-trends-2024.html">Top 10 AI Coding Trends to Watch in 2024</a></h3>
+                        <p>Discover the latest trends in AI-powered development tools and how they're reshaping the software development landscape...</p>
+                        <a href="blog/ai-coding-trends-2024.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="img/blog/copilot-vs-codewhisperer.jpg" alt="GitHub Copilot vs CodeWhisperer">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="date">January 10, 2024</span>
+                            <span class="category">Comparison</span>
+                        </div>
+                        <h3><a href="blog/copilot-vs-codewhisperer.html">GitHub Copilot vs Amazon CodeWhisperer: Complete Comparison</a></h3>
+                        <p>An in-depth comparison of the two leading AI coding assistants, including features, pricing, and performance analysis...</p>
+                        <a href="blog/copilot-vs-codewhisperer.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="img/blog/ai-productivity-tips.jpg" alt="AI Productivity Tips">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="date">January 5, 2024</span>
+                            <span class="category">Tutorial</span>
+                        </div>
+                        <h3><a href="blog/ai-productivity-tips.html">5 Ways AI Tools Can Boost Your Coding Productivity</a></h3>
+                        <p>Learn practical strategies to integrate AI tools into your development workflow and increase your productivity by 50%...</p>
+                        <a href="blog/ai-productivity-tips.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="img/blog/beginner-ai-tools.jpg" alt="AI Tools for Beginners">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="date">December 28, 2023</span>
+                            <span class="category">Guide</span>
+                        </div>
+                        <h3><a href="blog/beginner-ai-tools.html">Best AI Coding Tools for Beginners: A Complete Guide</a></h3>
+                        <p>New to programming? Discover the best AI tools that can help you learn faster and write better code from day one...</p>
+                        <a href="blog/beginner-ai-tools.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="container">
+            <h3>Stay Updated</h3>
+            <p>Get the latest AI development tools and insights delivered to your inbox</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 AI Dev Tools Navigator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+</body>
+</html>

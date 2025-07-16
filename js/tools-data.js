@@ -391,6 +391,29 @@ const toolsData = [
         logo: "https://github.com/favicon.ico",
         screenshot: "img/screenshots/github.png",
         url: "https://github.com",
-        category: "collaboration"
+        category: "collaboration",
+        publishDate: "2025年7月17日"
+    },
+
+    // AI Development Tools & IDEs
+    {
+        id: 48,
+        name: "KIRO",
+        description: "AI-powered development environment and assistant designed to enhance developer productivity with intelligent code suggestions and automation",
+        screenshot: "img/screenshots/kiro.png",
+        url: "https://kiro.dev/",
+        category: "code-generation",
+        publishDate: "2025年7月16日"
+    },
+    
+    // Domain & Web Tools
+    {
+        id: 49,
+        name: "Query.Domains",
+        description: "Advanced domain search and analysis tool for finding available domains, checking domain history, and analyzing domain metrics",
+        screenshot: "img/screenshots/query-domains.png",
+        url: "https://query.domains",
+        category: "design-assistance",
+        publishDate: "2025年7月17日"
     }
 ]; 
